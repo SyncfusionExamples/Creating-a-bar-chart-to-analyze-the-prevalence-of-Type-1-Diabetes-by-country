@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
+             xmlns:model="clr-namespace:DiabetesDetails"
+             x:Class="DiabetesDetails.MainPage">
+
+    <ContentPage.BindingContext>
+        <model:DiabetesData/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <x:String x:Key="PathData1">M13.9502 4.09145C12.2933 4.0928 10.9513 5.43705 10.9526 7.0939L10.9731 32.0939C10.9745 33.7507 12.3187 35.0928 13.9756 35.0914L18.7256 35.0875C19.4159 35.087 19.9751 34.5269 19.9745 33.8365C19.974 33.1462 20.5332 32.5861 21.2235 32.5855L28.7235 32.5794C29.4139 32.5788 29.974 33.138 29.9745 33.8283C29.9751 34.5187 30.5352 35.0779 31.2256 35.0773L35.9756 35.0734C37.6324 35.0721 38.9745 33.7278 38.9731 32.071L38.9526 7.07097C38.9513 5.41412 37.607 4.07207 35.9502 4.07343L13.9502 4.09145ZM33.9534 8.07504L15.9534 8.08978L15.9682 26.0898L33.9682 26.075L33.9534 8.07504ZM16.9712 29.589C16.9707 29.0367 17.4181 28.5886 17.9704 28.5881L21.9702 28.5849C22.5225 28.5844 22.9706 29.0318 22.971 29.584C22.9715 30.1363 22.5242 30.5844 21.9719 30.5849L17.972 30.5881C17.4197 30.5886 16.9716 30.1412 16.9712 29.589ZM27.9704 28.5799C27.4181 28.5804 26.9707 29.0285 26.9712 29.5808C26.9716 30.133 27.4197 30.5804 27.972 30.5799L31.9719 30.5767C32.5242 30.5762 32.9715 30.1281 32.971 29.5758C32.9706 29.0236 32.5225 28.5762 31.9702 28.5767L27.9704 28.5799Z</x:String>
+        <x:String x:Key="PathData2">M28.9619 18.3342C28.9637 20.4676 27.205 22.1452 24.965 22.147C22.725 22.1489 20.9637 20.4741 20.9619 18.3408C20.9602 16.2075 24.9563 11.4804 24.9563 11.4804C24.9563 11.4804 28.9603 16.3533 28.9619 18.3342Z</x:String>
+        <x:String x:Key="PathData3">M28.974 33.0792L20.974 33.0857L20.9814 42.0857L28.9814 42.0791L28.974 33.0792ZM18.9724 31.0873L18.9831 44.0873L30.9831 44.0775L30.9724 31.0775L18.9724 31.0873Z</x:String>
+        <x:String x:Key="PathData4">M26.9782 38.0808C26.9791 39.1854 26.0844 40.0815 24.9798 40.0824C23.8753 40.0833 22.9791 39.1886 22.9782 38.0841C22.9773 36.9795 23.872 36.0833 24.9766 36.0824C26.0811 36.0815 26.9773 36.9762 26.9782 38.0808Z</x:String>
+    </ContentPage.Resources>
+
+    <Border BackgroundColor="#d6f6ff" Stroke="#0e385d" Padding="5" StrokeShape="RoundRectangle 10" Margin="30">
+
+            <chart:SfCartesianChart IsTransposed="True">
+
+            <chart:SfCartesianChart.Title>
+                <Label Text="Who Has Type 1 Diabetes?" FontSize="25" FontAttributes="Bold" FontFamily="Verdana"
+             HorizontalTextAlignment="Center" TextColor="#666666"/>
+            </chart:SfCartesianChart.Title>
+
+            <chart:SfCartesianChart.XAxes>
+                <chart:CategoryAxis ShowMajorGridLines="False">
+                    <chart:CategoryAxis.AxisLineStyle>
+                        <chart:ChartLineStyle StrokeWidth="0"/>
+                    </chart:CategoryAxis.AxisLineStyle>
+                    <chart:CategoryAxis.MajorTickStyle>
+                        <chart:ChartAxisTickStyle StrokeWidth="0"/>
+                    </chart:CategoryAxis.MajorTickStyle>
+                </chart:CategoryAxis>
+            </chart:SfCartesianChart.XAxes>
+
+                <chart:SfCartesianChart.YAxes>
+                    <chart:NumericalAxis IsVisible="False" ShowMajorGridLines="False"/>
+                </chart:SfCartesianChart.YAxes>
+
+            <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="Country"
+                          YBindingPath="Value" Fill="#008FFB" ShowDataLabels="True">
+            </chart:ColumnSeries>
+
+            <chart:SfCartesianChart.PlotAreaBackgroundView>
+                <AbsoluteLayout>
+                    <Border AbsoluteLayout.LayoutBounds="{OnPlatform Default='0.9,0.3,-1,-1',Android='1,0.1,300,200', iOS='1,0.1,300,200'}"
+			                AbsoluteLayout.LayoutFlags="PositionProportional" 
+                            Stroke="#0e385d" StrokeShape="RoundRectangle 10" Margin="10">
+
+                        <chart:SfCircularChart>
+                            <chart:SfCircularChart.Title>
+                                <Label Text="Age distribution in the US" FontSize="16" FontFamily="Verdana"
+                                       HorizontalTextAlignment="Center" Padding="0,5,0,0" TextColor="#666666"/>
+                            </chart:SfCircularChart.Title>
+
+                            <chart:SfCircularChart.Legend>
+                                <chart:ChartLegend Placement="Bottom"/>
+                            </chart:SfCircularChart.Legend>
+
+                            <chart:DoughnutSeries ItemsSource="{Binding USDetails}" XBindingPath="AgeCategory" YBindingPath="Count" 
+                                       InnerRadius="{OnPlatform Default=0.5,Android=0.6,iOS=0.6}" Radius="{OnPlatform Default=0.8,Android=1,iOS=1}"
+                                       ShowDataLabels="True" PaletteBrushes="{Binding CustomBrushes}">
+
+                                <chart:DoughnutSeries.DataLabelSettings>
+                                    <chart:CircularDataLabelSettings>
+                                        <chart:CircularDataLabelSettings.LabelStyle>
+                                            <chart:ChartDataLabelStyle LabelFormat="0'%" FontSize="{OnPlatform Android=9,iOS=9}" Margin="0.1"/>
+                                        </chart:CircularDataLabelSettings.LabelStyle>
+                                    </chart:CircularDataLabelSettings>
+                                </chart:DoughnutSeries.DataLabelSettings>
+
+                                <chart:DoughnutSeries.CenterView>
+                                    <Grid Margin="-10,0,0,0">
+                                        <Path Data="{StaticResource PathData1}" Fill="#0d5e9b"/>
+                                        <Path Data="{StaticResource PathData2}" Fill="#E3465D"/>
+                                        <Path Data="{StaticResource PathData3}" Fill="#0d5e9b"/>
+                                        <Path Data="{StaticResource PathData4}" Fill="#0d5e9b"/>
+                                    </Grid>
+                                </chart:DoughnutSeries.CenterView>
+                            </chart:DoughnutSeries>
+                        </chart:SfCircularChart>
+                    </Border>
+                </AbsoluteLayout>
+            </chart:SfCartesianChart.PlotAreaBackgroundView>
+
+        </chart:SfCartesianChart>
+    </Border>
+    
+</ContentPage>
