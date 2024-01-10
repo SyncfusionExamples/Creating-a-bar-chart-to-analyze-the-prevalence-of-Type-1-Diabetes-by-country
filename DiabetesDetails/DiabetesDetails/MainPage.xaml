@@ -42,6 +42,15 @@
 
             <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="Country"
                           YBindingPath="Value" Fill="#008FFB" ShowDataLabels="True">
+                
+                <chart:ColumnSeries.DataLabelSettings>
+                    <chart:CartesianDataLabelSettings>
+                        <chart:CartesianDataLabelSettings.LabelStyle>
+                            <chart:ChartDataLabelStyle FontSize="{OnPlatform Android=10.5}"/>
+                        </chart:CartesianDataLabelSettings.LabelStyle>
+                    </chart:CartesianDataLabelSettings>
+                </chart:ColumnSeries.DataLabelSettings>
+                    
             </chart:ColumnSeries>
 
             <chart:SfCartesianChart.PlotAreaBackgroundView>
