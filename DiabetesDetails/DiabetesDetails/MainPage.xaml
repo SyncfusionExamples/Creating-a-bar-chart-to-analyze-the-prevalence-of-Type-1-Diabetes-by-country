@@ -46,7 +46,7 @@
                 <chart:ColumnSeries.DataLabelSettings>
                     <chart:CartesianDataLabelSettings>
                         <chart:CartesianDataLabelSettings.LabelStyle>
-                            <chart:ChartDataLabelStyle FontSize="{OnPlatform Android=10.5}"/>
+                            <chart:ChartDataLabelStyle FontSize="{OnPlatform Android=10.5 , Default=13}"/>
                         </chart:CartesianDataLabelSettings.LabelStyle>
                     </chart:CartesianDataLabelSettings>
                 </chart:ColumnSeries.DataLabelSettings>
