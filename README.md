@@ -11,7 +11,7 @@ https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ColumnSeries.html#Syn
 
 ### Plot area background view:
 
-We can add any view to the plot area using the [PlotAreaBackgroundView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_PlotAreaBackgroundView support, which is useful for adding relevant data.
+We can add any view to the plot area using the [PlotAreaBackgroundView](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Charts.ChartBase.html#Syncfusion_Maui_Charts_ChartBase_PlotAreaBackgroundView) support, which is useful for adding relevant data.
 
 In this example, we will compare the prevalence of type 1 diabetes in different countries using the .NET MAUI Cartesian Chart.
 
