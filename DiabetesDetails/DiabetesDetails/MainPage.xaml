@@ -43,7 +43,7 @@
                         <chart:ChartAxisTickStyle StrokeWidth="0"/>
                     </chart:CategoryAxis.MajorTickStyle>
                     <chart:CategoryAxis.LabelStyle>
-                        <chart:ChartAxisLabelStyle FontSize="13.5"/>
+                        <chart:ChartAxisLabelStyle FontSize="{OnPlatform Android=10, iOS=10, Default=13.5}"/>
                     </chart:CategoryAxis.LabelStyle>
                 </chart:CategoryAxis>
             </chart:SfCartesianChart.XAxes>
