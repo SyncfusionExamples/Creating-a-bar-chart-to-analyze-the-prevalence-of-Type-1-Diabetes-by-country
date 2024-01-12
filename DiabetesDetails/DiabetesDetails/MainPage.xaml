@@ -16,13 +16,22 @@
         <x:String x:Key="PathData4">M26.9782 38.0808C26.9791 39.1854 26.0844 40.0815 24.9798 40.0824C23.8753 40.0833 22.9791 39.1886 22.9782 38.0841C22.9773 36.9795 23.872 36.0833 24.9766 36.0824C26.0811 36.0815 26.9773 36.9762 26.9782 38.0808Z</x:String>
     </ContentPage.Resources>
 
-    <Border BackgroundColor="#d6f6ff" Stroke="#0e385d" Padding="5" StrokeShape="RoundRectangle 10" Margin="30">
+    <Border Stroke="#0e385d" Padding="{OnPlatform Default=10, Android=7,iOS=7}" StrokeShape="RoundRectangle 10" Margin="25" StrokeThickness="1.5">
 
             <chart:SfCartesianChart IsTransposed="True">
 
             <chart:SfCartesianChart.Title>
-                <Label Text="Who Has Type 1 Diabetes?" FontSize="25" FontAttributes="Bold" FontFamily="Verdana"
-             HorizontalTextAlignment="Center" TextColor="#666666"/>
+                <Grid Margin="0,0,0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="13"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Grid.RowSpan="2"  Margin="0,8,0,6" Orientation="Vertical" BackgroundColor="#008FFB" />
+                    <StackLayout Grid.Column="1" Margin="5,0,0,0" HorizontalOptions="Start" Orientation="Vertical" >
+                        <Label Text="Who Has Type 1 Diabetes?" FontSize="Large" FontAttributes="Bold" TextColor="#666666"/>
+                        <Label Text="Estimated number of people with type 1 diabetes, by country" FontSize="17" TextColor="Gray"/>
+                    </StackLayout>
+                </Grid>
             </chart:SfCartesianChart.Title>
 
             <chart:SfCartesianChart.XAxes>
@@ -33,6 +42,9 @@
                     <chart:CategoryAxis.MajorTickStyle>
                         <chart:ChartAxisTickStyle StrokeWidth="0"/>
                     </chart:CategoryAxis.MajorTickStyle>
+                    <chart:CategoryAxis.LabelStyle>
+                        <chart:ChartAxisLabelStyle FontSize="13.5"/>
+                    </chart:CategoryAxis.LabelStyle>
                 </chart:CategoryAxis>
             </chart:SfCartesianChart.XAxes>
 
@@ -40,13 +52,14 @@
                     <chart:NumericalAxis IsVisible="False" ShowMajorGridLines="False"/>
                 </chart:SfCartesianChart.YAxes>
 
-            <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="Country"
-                          YBindingPath="Value" Fill="#008FFB" ShowDataLabels="True">
+            <chart:ColumnSeries ItemsSource="{Binding Data}" XBindingPath="Country" YBindingPath="Value"
+                                CornerRadius="0,15,0,15" Width="{OnPlatform WinUI=0.6,MacCatalyst=0.6}"
+                                Fill="#008FFB" ShowDataLabels="True">
                 
                 <chart:ColumnSeries.DataLabelSettings>
-                    <chart:CartesianDataLabelSettings>
+                    <chart:CartesianDataLabelSettings UseSeriesPalette="False">
                         <chart:CartesianDataLabelSettings.LabelStyle>
-                            <chart:ChartDataLabelStyle FontSize="{OnPlatform Android=10.5 , Default=13}"/>
+                            <chart:ChartDataLabelStyle FontSize="{OnPlatform Android=10.5 , iOS=10.5 , Default=14}" TextColor="White"/>
                         </chart:CartesianDataLabelSettings.LabelStyle>
                     </chart:CartesianDataLabelSettings>
                 </chart:ColumnSeries.DataLabelSettings>
@@ -55,8 +68,8 @@
 
             <chart:SfCartesianChart.PlotAreaBackgroundView>
                 <AbsoluteLayout>
-                    <Border AbsoluteLayout.LayoutBounds="{OnPlatform WinUI='0.9,0.3,-1,-1',Android='1,0.1,300,200', iOS='1,0.1,320,200', MacCatalyst='0.9,0.3,350,-1'}"
-			                AbsoluteLayout.LayoutFlags="PositionProportional" 
+                    <Border AbsoluteLayout.LayoutBounds="{OnPlatform WinUI='0.9,0.3,-1,-1',Android='1,-1,320,200', iOS='1,-1,320,200', MacCatalyst='0.9,0.3,350,-1'}"
+			                AbsoluteLayout.LayoutFlags="PositionProportional" StrokeThickness="1.5"
                             Stroke="#0e385d" StrokeShape="RoundRectangle 10" Margin="10">
 
                         <chart:SfCircularChart>
@@ -74,9 +87,9 @@
                                        ShowDataLabels="True" PaletteBrushes="{Binding CustomBrushes}">
 
                                 <chart:DoughnutSeries.DataLabelSettings>
-                                    <chart:CircularDataLabelSettings>
+                                    <chart:CircularDataLabelSettings LabelPlacement="Inner" UseSeriesPalette="False">
                                         <chart:CircularDataLabelSettings.LabelStyle>
-                                            <chart:ChartDataLabelStyle LabelFormat="0'%" FontSize="{OnPlatform Android=9,iOS=9}" Margin="0.1"/>
+                                            <chart:ChartDataLabelStyle LabelFormat="0'%" FontSize="{OnPlatform Android=9,iOS=9, Default=13}" TextColor="White"/>
                                         </chart:CircularDataLabelSettings.LabelStyle>
                                     </chart:CircularDataLabelSettings>
                                 </chart:DoughnutSeries.DataLabelSettings>
