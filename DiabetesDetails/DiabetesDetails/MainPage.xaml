@@ -26,8 +26,8 @@
                         <ColumnDefinition Width="13"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <StackLayout Grid.RowSpan="2"  Margin="0,8,0,6" Orientation="Vertical" BackgroundColor="#008FFB" />
-                    <StackLayout Grid.Column="1" Margin="5,0,0,0" HorizontalOptions="Start" Orientation="Vertical" >
+                    <StackLayout Grid.RowSpan="2" Margin="0,8,0,6" Orientation="Vertical" BackgroundColor="#008FFB" />
+                    <StackLayout Grid.Column="1" Margin="5,0,0,0" HorizontalOptions="Start" Orientation="Vertical">
                         <Label Text="Who Has Type 1 Diabetes?" FontSize="Large" FontAttributes="Bold" TextColor="#666666"/>
                         <Label Text="Estimated number of people with type 1 diabetes, by country" FontSize="17" TextColor="Gray"/>
                     </StackLayout>
