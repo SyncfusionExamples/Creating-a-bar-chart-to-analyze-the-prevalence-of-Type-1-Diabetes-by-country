@@ -17,8 +17,7 @@ In this example, we will compare the prevalence of type 1 diabetes in different 
 
 Diabetes is a chronic metabolic disease characterized by elevated levels of blood glucose, also known as blood sugar. This condition can cause serious damage to the heart, blood vessels, eyes, kidneys, and nerves over time. There are different types of diabetes. In people with type 1 diabetes, the immune system targets the insulin-producing islet cells of the pancreas, preventing the pancreas from producing insulin.
 
-![image](https://github.com/SyncfusionExamples/Creating-a-bar-chart-to-analyze-the-prevalence-of-Type-1-Diabetes-by-country/assets/103025761/7f280860-f314-459c-a0f0-a163572744f5)
-
+![Demo](https://github.com/SyncfusionExamples/Creating-a-bar-chart-to-analyze-the-prevalence-of-Type-1-Diabetes-by-country/assets/103025761/0329afb1-576d-4149-9ddc-9713be1f3a0b)
 
 
 ## Troubleshooting:
