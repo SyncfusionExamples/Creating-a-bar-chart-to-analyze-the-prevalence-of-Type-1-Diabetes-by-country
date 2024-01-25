@@ -59,7 +59,7 @@
                 <chart:ColumnSeries.DataLabelSettings>
                     <chart:CartesianDataLabelSettings UseSeriesPalette="False">
                         <chart:CartesianDataLabelSettings.LabelStyle>
-                            <chart:ChartDataLabelStyle FontSize="{OnPlatform Android=10.5 , iOS=10.5 , Default=14}" TextColor="White"/>
+                            <chart:ChartDataLabelStyle LabelFormat="###,###" FontSize="{OnPlatform Android=10.5 , iOS=10.5 , Default=14}" TextColor="White"/>
                         </chart:CartesianDataLabelSettings.LabelStyle>
                     </chart:CartesianDataLabelSettings>
                 </chart:ColumnSeries.DataLabelSettings>

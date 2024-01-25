@@ -17,7 +17,7 @@ In this example, we will compare the prevalence of type 1 diabetes in different 
 
 Diabetes is a chronic metabolic disease characterized by elevated levels of blood glucose, also known as blood sugar. This condition can cause serious damage to the heart, blood vessels, eyes, kidneys, and nerves over time. There are different types of diabetes. In people with type 1 diabetes, the immune system targets the insulin-producing islet cells of the pancreas, preventing the pancreas from producing insulin.
 
-![image](https://github.com/SyncfusionExamples/Creating-a-bar-chart-to-analyze-the-prevalence-of-Type-1-Diabetes-by-country/assets/103025761/7f280860-f314-459c-a0f0-a163572744f5)
+![Visualizing-Type-1-Diabetes-prevalence-using- NET-MAUI-Bar-Chart](https://github.com/SyncfusionExamples/Creating-a-bar-chart-to-analyze-the-prevalence-of-Type-1-Diabetes-by-country/assets/103025761/d9be07d6-04ae-4776-b6f6-ab8400ac47d7)
 
 
 
@@ -25,4 +25,4 @@ Diabetes is a chronic metabolic disease characterized by elevated levels of bloo
 
 ### Path too long exception:
 
-If you encounter a path too long exception when building this example project, close Visual Studio and rename the repository to a shorter name before building the project. For a step-by-step procedure, refer to the [Type 1 Diabetes prevalence blog]().
+If you encounter a path too long exception when building this example project, close Visual Studio and rename the repository to a shorter name before building the project. For a step-by-step procedure, refer to the [Type 1 Diabetes prevalence blog](https://www.syncfusion.com/blogs/post/dotnet-maui-bar-chart-diabetes.aspx).
