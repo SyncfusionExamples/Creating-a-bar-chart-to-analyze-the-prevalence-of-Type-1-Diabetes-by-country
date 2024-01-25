@@ -24,4 +24,4 @@ Diabetes is a chronic metabolic disease characterized by elevated levels of bloo
 
 ### Path too long exception:
 
-If you encounter a path too long exception when building this example project, close Visual Studio and rename the repository to a shorter name before building the project. For a step-by-step procedure, refer to the [Type 1 Diabetes prevalence blog]().
+If you encounter a path too long exception when building this example project, close Visual Studio and rename the repository to a shorter name before building the project. For a step-by-step procedure, refer to the [Type 1 Diabetes prevalence blog](https://www.syncfusion.com/blogs/post/dotnet-maui-bar-chart-diabetes.aspx).
